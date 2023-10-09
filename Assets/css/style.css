@@ -1,0 +1,345 @@
+:root {
+    --primary: #E84545;
+    --bg: rgb(17, 19, 39);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    background-color: black;
+    color: aliceblue;
+    /* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: aliceblue;
+    letter-spacing: 0.28rem;
+}
+
+.navbar .navbar-nav a {
+    color: aliceblue;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: gray;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.15rem solid gray;
+    transform: scaleX(0);
+    transition: 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: aliceblue;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: gray;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(/Assets/image/6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1, 1, 1, 3) 3%, rgba(255, 255, 255, 0) 25%);
+}
+
+.hero .content {
+    padding: 1.4rem 6%;
+    max-width: 60%;
+}
+
+.hero .content h1 {
+    font-size: 9.2rem;
+    letter-spacing: 0.4rem;
+    text-shadow: 5px 5px 8px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content p {
+    font-size: 2rem;
+    text-shadow: 5px 5px 8px rgba(1, 1, 3, 0.5);
+    line-height: 1.5;
+    font-weight: 350;
+    letter-spacing: 0.25;
+}
+
+/* Hero End */
+
+/* Mini Gallery */
+.mini-gallery {
+    margin: 8rem 0;
+    padding: 5rem 8%;
+    align-items: center;
+}
+
+.mini-gallery .mini-gallery-content {
+    display: flex;
+    height: 25rem;
+    gap: 0.5rem;
+}
+
+.mini-gallery .mini-gallery-content div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .5s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.mini-gallery .mini-gallery-content div:hover {
+    flex: 2;
+    border-radius: 2rem;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.gl:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.gl:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.gl:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.gl:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+/* Mini Gallery End */
+
+/* Price card */
+.price {
+    padding: 5rem 8%;
+}
+
+.price-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+.price-card {
+    margin-bottom: 3rem;
+}
+
+.card-header {
+    padding: 2rem;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header h1 {
+    text-align: center;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.harga:hover {
+    font-size: 5rem;
+}
+
+.price-content {
+    padding: 5rem;
+    background-color: aliceblue;
+}
+
+.price-content ul li {
+    list-style-type: none;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+    font-weight: 580;
+}
+
+.price-content ul {
+    align-items: center;
+}
+
+.card-footer {
+    padding: 2rem;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid white;
+    justify-content: space-between;
+    display: flex;
+    text-decoration: none;
+}
+
+.card-footer a {
+    color: white;
+}
+
+.card-footer a:hover {
+    color: grey;
+}
+
+/* Price card End */
+
+/* Media Query */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+
+    .mini-gallery .mini-gallery-content div:hover {
+        flex: 3;
+        border-radius: 2rem;
+    }
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        height: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: black;
+        box-shadow: 0 10px 8px -10px gray;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .navbar .navbar-nav.active {
+        height: 250px;
+        z-index: 9999;
+    }
+
+    .navbar.active {
+        background: black;
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 30px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav a::after {
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.15rem solid gray;
+        transform: scaleX(0);
+        transition: 0.1s linear;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.1);
+    }
+
+    .navbar .navbar-nav a:hover {
+        transform: scaleX(-1);
+    }
+
+    .mini-gallery .mini-gallery-content div:hover {
+        flex: 5;
+        border-radius: 2rem;
+    }
+
+
+
+}
+
+/* Phone */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .mini-gallery .mini-gallery-content div:hover {
+        flex: 7;
+        border-radius: 2rem;
+    }
+}
