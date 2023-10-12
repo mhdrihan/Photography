@@ -137,12 +137,14 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    transition: all .5s cubic-bezier(.25, .4, .45, 1.4);
+    transition: all 1s cubic-bezier(.25, .4, .45, 1.4);
+    filter: grayscale(1);
 }
 
 .mini-gallery .mini-gallery-content div:hover {
     flex: 2;
     border-radius: 2rem;
+    filter: grayscale(0);
 }
 
 .hidden {
@@ -266,7 +268,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
-    transition: 0.5s;
+    transition: 1s;
     filter: grayscale(1);
 }
 
