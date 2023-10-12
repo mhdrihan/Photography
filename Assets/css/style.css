@@ -413,6 +413,20 @@ body {
     }
 }
 
+/* big size Tablet */
+@media(max-width: 850px) {
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url('../image/18.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 17%;
+        position: relative;
+    }
+}
+
 /* Tablet */
 @media(max-width: 768px) {
     html {
@@ -472,6 +486,17 @@ body {
     .mini-gallery .mini-gallery-content div:hover {
         flex: 5;
         border-radius: 2rem;
+    }
+
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        background-image: url('../image/18.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 20%;
+        position: relative;
     }
 
     .gallery-item {
