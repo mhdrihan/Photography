@@ -81,10 +81,10 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../image/6.jpg');
+    background-image: url('../image/18.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
+    background-position: bottom;
     position: relative;
 }
 
@@ -466,7 +466,12 @@ body {
         border-radius: 2rem;
     }
 
-
+    .gallery-item {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(9, 8vw);
+        grid-gap: 10px;
+    }
 
 }
 
@@ -483,5 +488,12 @@ body {
     .mini-gallery .mini-gallery-content div:hover {
         flex: 7;
         border-radius: 2rem;
+    }
+
+    .gallery-item {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(9, 8vw);
+        grid-gap: 5px;
     }
 }
